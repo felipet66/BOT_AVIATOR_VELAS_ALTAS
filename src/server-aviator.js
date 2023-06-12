@@ -12,7 +12,7 @@ const CHAT_ID_VIP = -1001934853510;
 
 const CHAT_ID_FREE = -1001899468267;
 
-const CHAT_ACTIVE = CHAT_ID_VIP;
+const CHAT_ACTIVE = CHAT_ID_FREE;
 
 async function obtemResultados() {
   try {
