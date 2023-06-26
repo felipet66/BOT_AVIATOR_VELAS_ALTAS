@@ -20,7 +20,13 @@ async function obtemResultados() {
     const betHouse = "APOSTA_GANHA";
     const numberVelas = 7;
     const response = await axios.get(
-      `${API_URL}history-vela?date=${dateNow}&bet-house=${betHouse}&number-velas=${numberVelas}`
+      `${API_URL}history-vela?date=${dateNow}&bet-house=${betHouse}&number-velas=${numberVelas}`,
+      {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUb3RvbmVyb1NlcnZpY2UiLCJzdWIiOiIxIiwiZW1haWwiOiJ0ZWxlY29AYWRpbS5jb20iLCJpZCI6MSwicm9sZXMiOlsiUk9MRV9URUxFQ08iXSwiaWF0IjoxNjg3NzQxNTUwLCJleHAiOjE2ODg2NDA1Mzl9.2auphYMMIiAXRGejBtcD4lJhB7cperVujgz2gtzI4RA"
+        }
+      }
     );
     return response.data;
   } catch (error) {
@@ -33,7 +39,7 @@ async function handleEditMessageTelegram(bot, messageId, message) {
 }
 
 // RODANDO NOSSA APLICAÇÃO NA PORTA SETADA
-app.listen(port, async () => {
+app.listen(8088, async () => {
   console.info("SERVIDOR INICIADO!");
   let dois = false;
 
