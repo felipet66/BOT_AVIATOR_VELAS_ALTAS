@@ -4,6 +4,16 @@ const axios = require("axios");
 
 const { Telegraf } = require("telegraf");
 
+const options = {
+  method: "GET",
+  url:
+    "https://aposta-ganha-aviator-api1.p.rapidapi.com/apostaganha-aviator-latest",
+  headers: {
+    "X-RapidAPI-Key": "8c90b725fdmshc520ab6927c0896p1cf1cfjsn89c7ac202a8e",
+    "X-RapidAPI-Host": "aposta-ganha-aviator-api1.p.rapidapi.com"
+  }
+};
+
 const API_URL = "https://aviator-manager-app.herokuapp.com/";
 // BOT CIFRAO
 // https://api.telegram.org/bot6193807556:AAFyhd8uT0-N0OX1CBtySk1-Eo0hhVt8b2A/getUpdates
@@ -14,7 +24,13 @@ async function obtemResultados() {
     const betHouse = "APOSTA_GANHA";
     const numberVelas = 10;
     const response = await axios.get(
-      `${API_URL}history-vela?date=${dateNow}&bet-house=${betHouse}&number-velas=${numberVelas}`
+      `${options}history-vela?date=${dateNow}&bet-house=${betHouse}&number-velas=${numberVelas}`,
+      {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUb3RvbmVyb1NlcnZpY2UiLCJzdWIiOiIxIiwiZW1haWwiOiJ0ZWxlY29AYWRpbS5jb20iLCJpZCI6MSwicm9sZXMiOlsiUk9MRV9URUxFQ08iXSwiaWF0IjoxNjg3NzQxNTUwLCJleHAiOjE2ODg2NDA1Mzl9.2auphYMMIiAXRGejBtcD4lJhB7cperVujgz2gtzI4RA"
+        }
+      }
     );
     return response.data;
   } catch (error) {
