@@ -24,7 +24,7 @@ async function obtemResultados() {
     const betHouse = "APOSTA_GANHA";
     const numberVelas = 10;
     const response = await axios.get(
-      `${options}history-vela?date=${dateNow}&bet-house=${betHouse}&number-velas=${numberVelas}`,
+      `${API_URL}history-vela?date=${dateNow}&bet-house=${betHouse}&number-velas=${numberVelas}`,
       {
         headers: {
           Authorization:
