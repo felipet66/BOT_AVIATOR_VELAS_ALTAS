@@ -14,7 +14,7 @@ export const GetHistoryOdd = async (): Promise<IHistoryOdd | undefined> => {
       {
         headers: {
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUb3RvbmVyb1NlcnZpY2UiLCJzdWIiOiIyIiwiZW1haWwiOiJmbGlwdG05NUBnbWFpbC5jb20iLCJpZCI6Miwicm9sZXMiOlsiUk9MRV9URUxFQ08iXSwiaWF0IjoxNjkwMTc0MTc1LCJleHAiOjE2OTEwNzMxNjR9.6h9raU8cTByK9RRuBCULxY4o8kj4VK7Sdwr0VtvtX-4"
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUb3RvbmVyb1NlcnZpY2UiLCJzdWIiOiIyIiwiZW1haWwiOiJmbGlwdG05NUBnbWFpbC5jb20iLCJpZCI6Miwicm9sZXMiOlsiUk9MRV9URUxFQ08iXSwiaWF0IjoxNjkxMDc1MTEyLCJleHAiOjE2OTE5NzQxMDJ9.BkEcirY1x6RfPuQR0SWNbsFr6I6pT86C6iveqSn2QbQ"
         }
       }
     );
@@ -30,7 +30,7 @@ export const GetHistoryOdd = async (): Promise<IHistoryOdd | undefined> => {
 export const SendMessageTelegram = async (odd: string, lastResult: number, strategy: string) => {
   const bot: Telegram = new Telegram(Enviroments.BOT_TELECO);
   const res = await bot.sendMessage(
-    Enviroments.CHAT_ID_TELECO_VIP,
+    -1001936954309,
     `🔥 BOT TELECO 🔥 \nSINAL CONFIRMADO! \nEntrar após ${lastResult}x \nVoar até ${odd}X \nEstratégia ${strategy}`
   );
 
