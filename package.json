@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "20.0.0",
+    "npm": "9.6.4"
+  },
   "scripts": {
     "start:dev": "npx nodemon",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
