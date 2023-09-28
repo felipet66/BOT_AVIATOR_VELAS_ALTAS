@@ -1,3 +1,0 @@
-const TelecoBot = () => void {
-  
-}

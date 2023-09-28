@@ -1,7 +1,6 @@
 
-import express, { Request, Response } from 'express';
+import express from 'express';
 import axios from 'axios';
-import { fromEvent } from 'rxjs';
 import { Telegram } from 'telegraf';
 
 const app = express();
