@@ -12,7 +12,7 @@
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "start": "node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf ./build && tsc"
+    "build": "tsc"
   },
   "author": "teleco",
   "license": "ISC",
