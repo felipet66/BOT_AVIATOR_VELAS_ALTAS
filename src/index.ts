@@ -5,7 +5,7 @@ import { fromEvent } from 'rxjs';
 import { Telegram } from 'telegraf';
 
 const app = express();
-const port = 3091;
+const port = 3094;
 
 app.use(express.json());
 
@@ -42,4 +42,3 @@ app.listen(port, () => {
       });
   }, 2000);
 });
-
